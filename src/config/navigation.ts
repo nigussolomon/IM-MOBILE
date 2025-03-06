@@ -12,8 +12,16 @@ export type NavItem = {
 
 export const navigationData: Record<string, NavItem[]> = {
     insurer: [
-        { link: '/home', label: 'Home', icon: DashboardIcon },
-        { link: '/listings', label: 'Listing', icon: CardStackIcon },
+        { link: '/insurer/home', label: 'Home', icon: DashboardIcon },
+        { link: '/insurer/listings', label: 'Listing', icon: CardStackIcon },
+    ],
+    admin: [
+        { link: '/admin/home', label: 'Home', icon: DashboardIcon },
+        { link: '/admin/listings', label: 'Listing', icon: CardStackIcon },
+    ],
+    customer: [
+        { link: '/customer/home', label: 'Home', icon: DashboardIcon },
+        { link: '/customer/listings', label: 'Listing', icon: CardStackIcon },
     ],
 };
 
