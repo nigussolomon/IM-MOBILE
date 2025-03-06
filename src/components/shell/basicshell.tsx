@@ -1,5 +1,6 @@
 import { AppShell, Burger, Group, Skeleton } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { NavbarSimple } from "./NavbarSimple";
 
 export default function Shell({ children }: { children: React.ReactNode }) {
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
@@ -31,13 +32,8 @@ export default function Shell({ children }: { children: React.ReactNode }) {
           />
         </Group>
       </AppShell.Header>
-      <AppShell.Navbar p="md">
-        Navbar
-        {Array(15)
-          .fill(0)
-          .map((_, index) => (
-            <Skeleton key={index} h={28} mt="sm" animate={false} />
-          ))}
+      <AppShell.Navbar p="sm">
+        <NavbarSimple userRole="insurer" />
       </AppShell.Navbar>
       <AppShell.Main>{children}</AppShell.Main>
     </AppShell>

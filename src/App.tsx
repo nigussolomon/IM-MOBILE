@@ -1,5 +1,14 @@
-export default function App(){
+import Shell from "./components/shell/basicshell";
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+
+export default function App() {
   return (
-    <h1>Hello World</h1>
+    <BrowserRouter>
+      <Shell>
+        <Routes>
+          <Route path="/" element={<h1>Welcome</h1>} />
+        </Routes>
+      </Shell>
+    </BrowserRouter>
   )
 }
